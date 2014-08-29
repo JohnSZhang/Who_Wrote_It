@@ -7,6 +7,8 @@ gem 'rails', '4.1.5'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+# Add bootstrap
+gem 'bootstrap-sass', '~> 3.2'  
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -33,10 +35,17 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-  gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
 # User rspec rails for test
-  gem 'rspec-rails', '~> 3.0.0', group [:development, :test]
+gem 'rspec-rails', '~> 3.0.0', group [:development, :test]
+
+# Add Capybara Selenium and Factory Girls Support
+gem 'capybara' group: [:development, :test]
+gem 'selenium-webdriver' group: [:development, :test]
+gem 'factory_girl_rails' group: [:development, :test]
+
+  
