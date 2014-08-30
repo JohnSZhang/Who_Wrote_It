@@ -41,11 +41,11 @@ gem 'capistrano-rails', group: :development
 # gem 'debugger', group: [:development, :test]
 
 # User rspec rails for test
-gem 'rspec-rails', '~> 3.0.0', group [:development, :test]
+gem 'rspec-rails', '~> 3.0.0', group: [:development, :test]
 
 # Add Capybara Selenium and Factory Girls Support
-gem 'capybara' group: [:development, :test]
-gem 'selenium-webdriver' group: [:development, :test]
-gem 'factory_girl_rails' group: [:development, :test]
+gem 'capybara', group: [:development, :test]
+gem 'selenium-webdriver',  group: [:development, :test]
+gem 'factory_girl_rails',  group: [:development, :test]
 
   
