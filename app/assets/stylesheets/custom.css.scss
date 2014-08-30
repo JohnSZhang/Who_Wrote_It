@@ -1,14 +1,58 @@
 @import "bootstrap";
+/* variables */
+$siteBackGroundGray: #000000;
+$topNavGray: #f8f8f8;
+$topNavHoverGray: #000000;
+$orangeAccent:#B96341;
+$tealContrast: #60AF76;
+$lightTealBorder: #E3F7F8;
 
 /* Universal */
 
 /* typography */
 
+h1, body, .navbar {
+	font-family: Georgia, serif
+}
+
 /* Header */
 .navbar-fixed-top {
-	background-color: #f8f8f8;
-	border-color: #A05540;
+	background-color: $topNavGray;
+	border-color: $orangeAccent;
+		.navbar-header {
+			.navbar-nav{
+				> li {
+					> a {
+					color: $orangeAccent;
+					}
+				}
+			}
+		}
+}
+#logo{
+	color: $tealContrast;
+}
+
+/* Body */
+body > .container{
+	margin-top: 71px;
+	min-height: 500px;
 }
 
 /* Footer */
+.footer {
+	.container {
+		border-top: 1px solid $lightTealBorder;
+		p {
+			width: 50%;
+			padding: 10px 20px;
+			float: left;
 
+		}
+		a {
+			color: $orangeAccent;
+			float: right;
+			padding: 10px 5px;
+		}
+	}
+}
