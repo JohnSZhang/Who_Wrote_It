@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 root 'page#home'
 match '/about', to: 'page#about', via: 'get'
 get "pages/about"
+resources :authors
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

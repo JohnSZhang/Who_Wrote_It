@@ -2,9 +2,15 @@
 
 FactoryGirl.define do
   factory :author do
-    name ""
-    nationality ""
-    birth ""
-    sex "MyText"
+    name "Sherlock Hummus"
+    nationality "USA"
+    birth 1988
+    sex "M"
+  end
+  factory :another_author do
+    name "James Joyce"
+    nationality "Ireland"
+    birth 1882
+    sex "M"
   end
 end
