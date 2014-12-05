@@ -1,5 +1,5 @@
 class Question
-  attr_accessor :answered, :sentence, :book_id
+  attr_accessor :answered, :sentence, :book
 
   def initialize
     self.answered = false
@@ -11,7 +11,7 @@ class Question
     self.sentence = Sentence.random()
     author = self.sentence.author
     self.authors[author.name] = author.id
-    self.book_id = self.sentence.book_id
+    self.book = self.sentence.book
   end
 
   def get_choices
