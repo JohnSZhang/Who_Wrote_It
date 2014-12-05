@@ -1,7 +1,8 @@
 class Quiz < ActiveRecord::Base
-  attr_accessor :over, :score, :cur_question
+  attr_accessor :cur_question
+  after_initialize :set_up
 
-  def initialize
+  def set_up
     self.over = false
     self.score = 0
     self.cur_question = Question.create
