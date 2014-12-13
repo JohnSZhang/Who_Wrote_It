@@ -9,7 +9,7 @@
 <form id="choice-<%= count %>" class="choice" action="<%= quiz_url %>" method="POST">
   <input type="hidden" name="_method" value="PUT">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="answer" value="<%= id %>">
+  <input type="hidden" name="answer_id" value="<%= id %>">
   <input type="submit" name="answer" value="<%= name %>">
 </form>
 <% end %>

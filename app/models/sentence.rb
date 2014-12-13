@@ -11,7 +11,7 @@ class Sentence
 
   def self.pick_sentence(text)
     sentences = text.split(/(?<=[?.!])/)
-    sentences.map!(&:strip).sort!{|a, b| a.length <=> b.length}
+    sentences.map!(&:strip).select!{|s| s.length >= 150}.sort_by{|a| a.length }
     len = sentences.length
     sentences[len/3..len*2/3].sample.gsub(/\n|\r\n/, " ")
   end
