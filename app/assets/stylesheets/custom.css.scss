@@ -16,22 +16,6 @@ h1, body, .navbar {
 }
 
 /* Header */
-.navbar-fixed-top {
-	background-color: $topNavGray;
-	border-color: $orangeAccent;
-		.navbar-header {
-			.navbar-nav{
-				> li {
-					> a {
-					color: $orangeAccent;
-					}
-				}
-			}
-		}
-}
-#logo{
-	color: $tealContrast;
-}
 
 /* Body */
 body > .container{
@@ -40,20 +24,3 @@ body > .container{
 }
 
 /* Footer */
-.footer {
-	.container {
-		border-top: 1px solid $lightTealBorder;
-		p {
-			width: 50%;
-			padding: 10px 20px;
-			float: left;
-			color: $orangeAccent;
-
-		}
-		a {
-			color: $orangeAccent;
-			float: right;
-			padding: 10px 5px;
-		}
-	}
-}
