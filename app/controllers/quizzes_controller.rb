@@ -1,7 +1,6 @@
 class QuizzesController < ApplicationController
   def show
     @quiz = Quiz.create
-    @quiz.new_question
     session[:quiz_id] = @quiz.id
     render "quiz"
   end

@@ -5,6 +5,7 @@ class Quiz < ActiveRecord::Base
   def set_up
     self.over = false
     self.score || self.score = 0
+    self.new_question
   end
 
   def new_question

@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :quiz do
+    cur_question "na"
   end
 end

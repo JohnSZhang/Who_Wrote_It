@@ -5,14 +5,16 @@ RSpec.describe Author, :type => :model do
 	subject { author }
 
 	it { should respond_to(:name) }
-	it { should respond_to(:nationality) }
-	it { should respond_to(:birth) }
-	it { should respond_to(:sex) }
 
 	it { should be_valid }
 
 	describe "when name is not present" do
 		before { author.name = '' }
+		it { should_not be_valid }
+	end
+
+	describe "when name is too short" do
+		before { author.name = 'short' }
 		it { should_not be_valid }
 	end
 
