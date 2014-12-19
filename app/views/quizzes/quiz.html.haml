@@ -1,0 +1,16 @@
+
+
+%h3 Question:
+
+%p Your current score: #{ @quiz.score }
+
+%p #{@quiz.cur_question.sentence.content}
+
+- count = 0
+- @quiz.cur_question.choices.each do |name, id|
+  - count += 1
+  %form#choice.choice{ action: "#{ quiz_url }", method: "POST"}
+    %input{ type: "hidden", name: "_method", value: "PUT" }
+    %input{ type: "hidden", name: "authenticity_token", value: "#{form_authenticity_token}" }
+    %input{ type: "hidden", name: "answer_id", value: "#{ id }" }
+    %input{ type: "submit", name: "answer", value: "#{ name }" }
