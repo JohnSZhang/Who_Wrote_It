@@ -15,6 +15,7 @@ class QuizzesController < ApplicationController
     else
       @quiz.check_answer(choice)
       if @quiz.over?
+        @high_score = Score.is_high(@quiz)
         render "over"
       else
         flash[:notice] = "another one!"
