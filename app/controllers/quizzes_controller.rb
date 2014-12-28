@@ -13,12 +13,15 @@ class QuizzesController < ApplicationController
     if !@quiz || !choice
       render text: "You have not played or picked an answer!"
     else
+      puts "choice is #{choice}"
+      puts "correct answer is #{@quiz.answer}"
       @quiz.check_answer(choice)
       if @quiz.over?
-        @high_score = Score.is_high(@quiz)
         render "over"
       else
         flash[:notice] = "another one!"
+        @quiz.new_question
+        @quiz.save!
         render "quiz"
       end
     end

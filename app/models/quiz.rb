@@ -5,7 +5,7 @@ class Quiz < ActiveRecord::Base
   def set_up
     self.over = false
     self.score || self.score = 0
-    self.new_question
+    self.answer || self.new_question
   end
 
   def new_question
@@ -13,17 +13,16 @@ class Quiz < ActiveRecord::Base
     self.author = cur_question.correct_book
     self.book = cur_question.correct_author
     self.answer = cur_question.correct_answer
-    self.save
+    self.save!
   end
 
   def check_answer(idx)
     if idx.to_i == self.answer
       self.score += 100
-      self.new_question
     else
       self.over = true
     end
-    self.save
+    self.save!
   end
 
   def over?

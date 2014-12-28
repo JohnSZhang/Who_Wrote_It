@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Quiz, :type => :model do
 
+  before(:all) do
+    load "#{Rails.root}/db/seeds.rb"
+  end
+
   let(:quiz) {Quiz.new}
   subject {quiz}
 
