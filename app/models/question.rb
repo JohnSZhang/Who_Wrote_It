@@ -21,7 +21,7 @@ class Question
   end
 
   def get_choices(score)
-    sample_count = [(score/500)+1, 4].min
+    sample_count = [(score/200)+1, 4].min
     remaining = Author.all.where("id != ?", self.sentence.author.id)
     remaining.sample(sample_count).each do |author|
       self.choices[author.name] = author.id

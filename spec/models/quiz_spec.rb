@@ -33,6 +33,7 @@ RSpec.describe Quiz, :type => :model do
   it "it should should have a new question if we answered correctly" do
     correct_answer = quiz.answer
     quiz.check_answer(correct_answer)
+    quiz.new_question
     expect(quiz.answer).not_to eq(correct_answer)
   end
 end

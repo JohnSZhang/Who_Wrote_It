@@ -1,13 +1,18 @@
 @import "bootstrap";
-/* variables */
-$siteBackGroundGray: #000000;
-$topNavGray: #f8f8f8;
-$topNavHoverGray: #000000;
-$orangeAccent:#B96341;
-$tealContrast: #60AF76;
-$lightTealBorder: #E3F7F8;
 
-/* Universal */
+/* variables */
+
+$background: #E9E0D6;
+$peacockgreen: #29ABA4;
+$darkgreen: #1F807B;
+$orange: #EB7260;
+$darkorange: #763930;
+$skyblue: #77C5F7;
+$darkskyblue: #0071BC;
+$navyblue: #354458;
+$darknavyblue: #0D1116;
+$white: #fff;
+$darkgrey: #666;
 
 /* typography */
 
@@ -15,12 +20,126 @@ h1, body, .navbar {
 	font-family: Georgia, serif
 }
 
-/* Header */
+p, a {
+	font-family: Helvetica, sans-serif;
+}
+
+h1, span, h2, h3, h4 {
+	color: $darkgrey;
+}
+
+a, button {
+	color: $white;
+}
+
+p {
+	color: $darkgreen;
+}
+
+.clear:after {
+		content: "";
+		display: block;
+		clear: both;
+}
 
 /* Body */
+body {
+	background-color: $background;
+
+	h1 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
 body > .container{
 	margin-top: 71px;
 	min-height: 500px;
-}
 
-/* Footer */
+	h1{
+		margin-bottom: 40px;
+	}
+	p {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	p.description {
+		font-size: 17px;
+	}
+
+	a.start, a.over, .choice input{
+		display: block;
+		text-align: center;
+		background: $orange;
+		padding: 10px;
+		font-size: 20px;
+		border-bottom: 3px solid $darkorange;
+		border-right: 1px solid $darkorange;
+
+		&:hover {
+			text-decoration: none;
+			color: $white;
+			padding-bottom: 13px;
+			border: none;
+		}
+	}
+
+	p.score{
+		text-align: left;
+		color: $darkorange;
+		font-size: 17px;
+	}
+
+	h3 {
+		margin-bottom: 15px;
+	}
+
+	blockquote {
+		color: $darkgreen;
+	}
+
+	form.choice input{
+		width:100%;
+		color: $white;
+		margin: 10px 0;
+		font-size: 20px;
+		border-top: 0;
+		border-left: 0;
+	}
+
+	#choice-2 input{
+		background-color: $peacockgreen;
+		border-bottom: 3px solid $darkgreen;
+		border-right: 1px solid $darkgreen;
+		&:hover {
+			padding-bottom: 13px;
+			border: none;
+		}
+
+	}
+
+	#choice-3 input {
+		background-color: $navyblue;
+		border-bottom: 3px solid $darknavyblue;
+		border-right: 1px solid $darknavyblue;
+		&:hover {
+			padding-bottom: 13px;
+			border: none;
+		}
+	}
+
+	#choice-4 input {
+		background-color: $skyblue;
+		border-bottom: 3px solid $darkskyblue;
+		border-right: 1px solid $darkskyblue;
+		&:hover {
+			padding-bottom: 13px;
+			border: none;
+		}
+	}
+
+	p.over {
+		color: $darkorange;
+	}
+}
